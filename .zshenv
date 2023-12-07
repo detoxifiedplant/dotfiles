@@ -18,6 +18,7 @@ path=(/usr/local/games $path)
 path=(/snap/bin $path)
 path=(/usr/local/bin/go/bin $path)
 export PATH
+# hi 
 
 ZDOTDIR=$HOME/.config/zsh/
 
