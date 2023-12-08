@@ -39,10 +39,6 @@ case "$TERM" in (rxvt|rxvt-*|st|st-*|*xterm*|(dt|k|E)term)
   ;;
 esac
 
-LS_COLORS='no=00;37:fi=00:di=00;95:ln=04;36:pi=40;33:so=01;35:bd=40;33;01:'
-export LS_COLORS
-zstyle ':completion:*' list-colors ${(s.:.)LS_COLORS}
-
 # Load and initialise completion system
 # autoload -Uz compinit
 # compinit
@@ -61,74 +57,18 @@ bindkey -M viins '^J' vi-down-line-or-history
 
 # Setting fd as the default source for fzf
 export FZF_DEFAULT_COMMAND='fd --type f --strip-cwd-prefix'
+# export FZF_DEFAULT_COMMAND='fd --type f --color=never --hidden'
 
 # To apply the command to CTRL-T as well
 export FZF_CTRL_T_COMMAND="$FZF_DEFAULT_COMMAND"
 
+LS_COLORS='no=00;37:fi=00:di=00;95:ln=04;36:pi=40;33:so=01;35:bd=40;33;01:'
+export LS_COLORS
+zstyle ':completion:*' list-colors ${(s.:.)LS_COLORS}
+
 # export FZF_DEFAULT_COMMAND='fd .'
 # bindkey -s '^S' ' **^I'
 
-# function fzf-nvim () {
-#     if $(check_req); then
-#
-#         local selected_file=$( \
-#             fd --type f \
-#             --hidden \
-#             --follow \
-#             --max-depth 1 \
-#             --exclude .git | \
-#
-#             fzf \
-#             --info inline \
-#             --bind 'ctrl-d:preview-down,ctrl-u:preview-up' \
-#             --preview "bat --style=numbers --theme=gruvbox-dark --color=always {} | head -500" \
-#             --color=dark \
-#             --color=fg:-1,bg:-1,hl:#5fff87,fg+:-1,bg+:-1,hl+:#ffaf5f \
-#             --color=info:#af87ff,prompt:#5fff87,pointer:#ff87d7,marker:#ff87d7,spinner:#ff87d7 \
-#             --query "$LBUFFER" --prompt="nvim file > "
-#         )
-#
-#         if [ -n "$selected_file" ]; then
-#             BUFFER="nvim $selected_file"
-#             zle accept-line
-#         fi
-#         zle reset-prompt
-#
-#     fi
-# }
-
-# function fzf-cd () {
-#     if $(check_req); then
-#
-#         local selected_file=$( \
-#             fd --type d \
-#             --max-depth 1 \
-#             --hidden \
-#             --follow \
-#             --exclude .git | \
-#
-#             fzf --preview "lsd -l --blocks=permission,name {} | head -50" \
-#             --bind 'ctrl-d:preview-down,ctrl-u:preview-up' \
-#             --info inline \
-#             --color=dark \
-#             --color=fg:-1,bg:-1,hl:#5fff87,fg+:-1,bg+:-1,hl+:#ffaf5f \
-#             --color=info:#af87ff,prompt:#5fff87,pointer:#ff87d7,marker:#ff87d7,spinner:#ff87d7 \
-#             --query "$LBUFFER" --prompt="Change dir to > "
-#         )
-#
-#         if [ -n "$selected_file" ]; then
-#             BUFFER="cd $selected_file"
-#             zle accept-line
-#         fi
-#         zle reset-prompt
-#
-#     fi
-# }
-
-# zle -N fzf-cd
-# zle -N fzf-nvim
-# bindkey '^F' fzf-cd
-# bindkey '^K' fzf-nvim
 
 # bindkey -M viins '^e' edit-command-line
 # bindkey -M vicmd '^e' edit-command-line
@@ -209,6 +149,6 @@ alias cat='batcat'
 alias rg='rg -i'
 alias lg='lazygit'
 alias whe='pwd'
-alias bare='/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME'
+alias bare='/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree ~'
 # alias -- -v='--version'
 #
