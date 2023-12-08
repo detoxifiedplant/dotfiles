@@ -56,15 +56,34 @@ bindkey -M viins '^L' vi-forward-char
 bindkey -M viins '^J' vi-down-line-or-history
 
 # Setting fd as the default source for fzf
-export FZF_DEFAULT_COMMAND='fd --type f --strip-cwd-prefix'
-# export FZF_DEFAULT_COMMAND='fd --type f --color=never --hidden'
+# export FZF_DEFAULT_COMMAND='fd --type f --strip-cwd-prefix'
+
+export FZF_DEFAULT_COMMAND='fd --type f --color=never --hidden'
+export FZF_DEFAULT_OPTS='--no-height --color=bg+:#343d46,gutter:-1,pointer:#ff3c3c,info:#0dbc79,hl:#0dbc79,hl+:#23d18b'
 
 # To apply the command to CTRL-T as well
 export FZF_CTRL_T_COMMAND="$FZF_DEFAULT_COMMAND"
+export FZF_CTRL_T_OPTS="--preview 'batcat --color=always --line-range :50 {}'"
+
+export FZF_ALT_C_COMMAND='fd --type d . --color=never --hidden'
+export FZF_ALT_C_OPTS="--preview 'tree -C {} | head -50'"
 
 LS_COLORS='no=00;37:fi=00:di=00;95:ln=04;36:pi=40;33:so=01;35:bd=40;33;01:'
 export LS_COLORS
 zstyle ':completion:*' list-colors ${(s.:.)LS_COLORS}
+
+
+if [ $(command -v nvim) ]; then
+	export EDITOR=$(which nvim)
+	alias vim=$EDITOR
+	alias v=$EDITOR
+fi
+
+export SUDO_EDITOR=$EDITOR
+export VISUAL=$EDITOR
+
+# MANPAGER
+export MANPAGER="sh -c 'col -bx | batcat -l man -p'"
 
 # export FZF_DEFAULT_COMMAND='fd .'
 # bindkey -s '^S' ' **^I'
