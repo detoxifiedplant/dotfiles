@@ -4,7 +4,7 @@
       - --login
 
   window:
-    # opacity: 0.95
+    # opacity: 0.92
     # background-opacity: 0.4
     # startup_mode: Fullscreen
     dynamic_padding: true
@@ -19,11 +19,11 @@
     hide_when_typing: true
 
   scrolling:
-    history: 1000
+    history: 100000
     multiplier: 3
 
   import:
-    - ~/.config/alacritty/themes/themes/tomorrow_night.yaml
+    - ~/.config/alacritty/themes/themes/catppuccin_mocha.yaml
 
   font:
     normal:
@@ -90,8 +90,12 @@
   colors:
     # Default colors
     primary:
+      # background: '#000000'
+      # background: '#131414'
+      background: '#0f0f0f'
+      # background: '#1a171f'
       # background: '#1d1f21'
-      background: '#000000'
+
       foreground: '#c5c8c6'
 
       # Bright and dim foreground colors

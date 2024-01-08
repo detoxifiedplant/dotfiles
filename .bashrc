@@ -145,3 +145,5 @@ source <(ng completion script)
 
 
 [ -f ~/.fzf.bash ] && source ~/.fzf.bash
+
+# xmodmap ~/.xmodmaprc

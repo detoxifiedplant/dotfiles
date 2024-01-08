@@ -27,8 +27,6 @@ if [ -d "$HOME/.local/bin" ]; then
 fi
 . "$HOME/.cargo/env"
 
-export FZF_DEFAULT_COMMAND='fd --type d --color=never --hidden'
-
 setxkbmap -option caps:swapescape
 setxkbmap -option ctrl:swap_lalt_lctl
 /usr/bin/feh --bg-fill --randomize ~/pictures/wallpapers/*

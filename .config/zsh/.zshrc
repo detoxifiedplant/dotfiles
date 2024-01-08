@@ -59,8 +59,8 @@ bindkey -M viins '^J' vi-down-line-or-history
 # export FZF_DEFAULT_COMMAND='fd --type f --strip-cwd-prefix'
 
 export FZF_DEFAULT_COMMAND='fd --type f --color=never --hidden'
-export FZF_DEFAULT_OPTS='--no-height --color=bg+:#343d46,gutter:-1,pointer:#ff3c3c,info:#0dbc79,hl:#0dbc79,hl+:#23d18b'
-
+export FZF_DEFAULT_OPTS='--no-height --color=bg+:#343d46,gutter:-1,pointer:#ff3c3c,info:#0dbc79,hl:#0dbc79,hl+:#23d18b,fg:#d0b979'
+# export FZF_DEFAULT_OPTS='--no-height --color=pointer:#31304D,gutter:-1,info:#0dbc79,hl:#FF0000,hl+:#3b4252,fg:#C0C0C0,bg+:#B6BBC4'
 # To apply the command to CTRL-T as well
 export FZF_CTRL_T_COMMAND="$FZF_DEFAULT_COMMAND"
 export FZF_CTRL_T_OPTS="--preview 'batcat --color=always --line-range :50 {}'"
@@ -68,9 +68,11 @@ export FZF_CTRL_T_OPTS="--preview 'batcat --color=always --line-range :50 {}'"
 export FZF_ALT_C_COMMAND='fd --type d . --color=never --hidden'
 export FZF_ALT_C_OPTS="--preview 'tree -C {} | head -50'"
 
-LS_COLORS='no=00;37:fi=00:di=00;95:ln=04;36:pi=40;33:so=01;35:bd=40;33;01:'
+LS_COLORS='no=00;32:fi=00;32:di=01;34:ln=04;36:pi=40;33:so=01;35:bd=40;33;01:'
 export LS_COLORS
 zstyle ':completion:*' list-colors ${(s.:.)LS_COLORS}
+# customCol='no=01;32:fi=01;32:di=01;34:ln=04;36:pi=40;33:so=01;35:bd=40;33;01:'
+# zstyle ':all-matches:*' list-colors ${(s.:.)customCol}
 
 
 if [ $(command -v nvim) ]; then
@@ -159,8 +161,8 @@ alias q="exit"
 alias snow="shutdown now"
 alias rn="ranger"
 alias -- -="cd -"
-alias cpf="~/copyfiles.sh"
-alias ref="~/revert.sh"
+alias cpf="~/tcpl/copyfiles.sh"
+alias ref="~/tcpl/revert.sh"
 alias hs="history | grep"
 alias mkcd='foo(){ mkdir -p "$1"; cd "$1" }; foo '
 alias sql='mysql'
@@ -169,5 +171,12 @@ alias rg='rg -i'
 alias lg='lazygit'
 alias whe='pwd'
 alias bare='/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree ~'
+alias grep='rg'
+alias ..='cd ..'
+alias ...='cd ../..'
+alias ....='cd ../../..'
+alias nd='npm run dev'
+alias na='npm run all'
+
 # alias -- -v='--version'
 #
