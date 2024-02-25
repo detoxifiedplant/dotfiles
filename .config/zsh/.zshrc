@@ -55,6 +55,9 @@ bindkey -M viins '^K' vi-up-line-or-history
 bindkey -M viins '^L' vi-forward-char
 bindkey -M viins '^J' vi-down-line-or-history
 
+bindkey -M viins '^P' vi-up-line-or-history
+bindkey -M viins '^N' vi-down-line-or-history
+
 # Setting fd as the default source for fzf
 # export FZF_DEFAULT_COMMAND='fd --type f --strip-cwd-prefix'
 
@@ -155,7 +158,8 @@ alias ls="exa --color=always --group-directories-first"
 alias ll="exa -l --color=always --group-directories-first"
 alias c='clear'
 alias cp="cp -r"
-alias rm="rm -rf"
+# alias rm="rm -rf"
+alias rm="rm -i"
 alias t="tree"
 alias q="exit"
 alias snow="shutdown now"
@@ -177,6 +181,8 @@ alias ...='cd ../..'
 alias ....='cd ../../..'
 alias nd='npm run dev'
 alias na='npm run all'
-
+alias p='python3'
+alias ps='python3 -m uvicorn app.main:app --reload --header server:TechFinoMSME | spacer'
+alias fman='compgen -c | fzf | xargs man'
 # alias -- -v='--version'
 #
