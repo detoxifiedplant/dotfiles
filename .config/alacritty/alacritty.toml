@@ -1,0 +1,89 @@
+# dynamic_title = true
+import = ["/home/kamal/.config/alacritty/themes/themes/catppuccin_latte.toml"]
+# raw_bold_text_with_bright_colors = true
+
+[window]
+dynamic_padding = true
+# opacity = 0.92
+# startup_mode = "Fullscreen"
+
+[colors]
+draw_bold_text_with_bright_colors = false
+
+[colors.cursor]
+cursor = "CellForeground"
+text = "CellBackground"
+
+[colors.primary]
+# background = "#0f0f0f"
+background = "#eff1f5"
+bright_foreground = "#eaeaea"
+dim_foreground = "#828482"
+# foreground = "#c5c8c6"
+foreground = "#0f0f0f"
+
+[colors.search.focused_match]
+background = "#000000"
+foreground = "#ffffff"
+
+[colors.search.matches]
+background = "#ffffff"
+foreground = "#000000"
+
+[colors.vi_mode_cursor]
+cursor = "#AC83D1"
+text = "#000000"
+
+# [cursor.style]
+# blink-interval = 700
+# blinking = "off"
+# shape = "Block"
+
+[font]
+builtin_box_drawing = true
+size = 11
+
+[font.bold]
+family = "terminal-font"
+style = "Bold"
+
+[font.bold_italic]
+family = "terminal-font"
+style = "Bold Italic"
+
+[font.italic]
+family = "terminal-font"
+style = "Bold Italic"
+
+[font.normal]
+family = "terminal-font"
+style = "Regular"
+
+[[keyboard.bindings]]
+action = "ToggleViMode"
+key = "V"
+mods = "Alt"
+
+[mouse]
+hide_when_typing = true
+
+[scrolling]
+history = 100000
+multiplier = 3
+
+[shell]
+args = ["--login"]
+program = "/usr/bin/zsh"
+
+[window.dimensions]
+columns = 90
+lines = 27
+
+[window.padding]
+# x = 5
+y = 0
+
+# [footer_bar]
+# background= '#c5c8c6'
+# foreground= '#1d1f21'
+

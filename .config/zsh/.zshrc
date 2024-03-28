@@ -146,8 +146,11 @@ export NVM_DIR="$HOME/.nvm"
 
 # zstyle ':completion:*:*:git:*' user-commands bare:'bare dotfiles git alias'
 
-source <(ng completion script)
-. "$HOME/.cargo/env"
+# source <(ng completion script)
+# . "$HOME/.cargo/env"
+export DB_USER="juskml"
+export DB_PASS="juspkml"
+export DB_NAME="hyperswitch_db"
 
 alias zcon="vim ~/.config/zsh/.zshrc"
 alias nano="vim"
@@ -167,7 +170,7 @@ alias rn="ranger"
 alias -- -="cd -"
 alias cpf="~/tcpl/copyfiles.sh"
 alias ref="~/tcpl/revert.sh"
-alias hs="history | grep"
+# alias hs="history | grep"
 alias mkcd='foo(){ mkdir -p "$1"; cd "$1" }; foo '
 alias sql='mysql'
 alias cat='batcat'
@@ -184,5 +187,11 @@ alias na='npm run all'
 alias p='python3'
 alias ps='python3 -m uvicorn app.main:app --reload --header server:TechFinoMSME | spacer'
 alias fman='compgen -c | fzf | xargs man'
+alias tl='tldr'
+alias cr='cargo run'
+alias bnd='~/tcpl/backend.sh'
+alias fnd='~/tcpl/frontend.sh'
+alias ngg='./node_modules/.bin/ng s'
+
 # alias -- -v='--version'
 #
