@@ -2,6 +2,7 @@
     /* `otf-font-awesome` is required to be installed for icons */
     font-family: Hack Neard Font, Roboto Mono Medium, Helvetica, Arial, sans-serif;
     font-size: 18px;
+	font-weight: 600;
 }
 
 window#waybar {
@@ -37,7 +38,7 @@ window#waybar.chromium {
 #workspaces button {
     padding: 0 0.4em;
     background-color: #282A36;
-    color: #ffffff;
+    color: #90b1b1;
 	font-size: 12px;
     /* Use box-shadow instead of border so the text isn't offset */
     box-shadow: inset 0 -3px transparent;
@@ -55,7 +56,7 @@ window#waybar.chromium {
 
 #workspaces button.focused {
     background-color: #44475A;
-	/* color: #eb4d4b; */
+	color: #26A65B;
     /* box-shadow: inset 0 -3px #ffffff; */
 }
 
@@ -83,7 +84,7 @@ window#waybar.chromium {
 #idle_inhibitor,
 #mpd {
     padding: 0 0.2em;
-	margin: 2px 2px;
+	/* margin: 2px 2px; */
     color: #fff;
 	/* background-color: #bbccdd; */
     /* border-radius: 0.1em; */
@@ -107,17 +108,20 @@ window#waybar.chromium {
 
 #clock {
     /* background-color: #90b1b1; */
-    color: #90b1b1;
-	font-weight: 600;
+    color: #bf616a;
+	/* padding-top: 0.2em; */
+	/* font-weight: 600; */
 }
 
-#battery {
+#battery,
+#bat2 {
     /* background-color: #2ecc71; */
     color: #2ecc71;
 }
 
-#battery.charging, #battery.plugged {
-    color: #ffffff;
+#battery.charging, #battery.plugged,
+#bat2.charging, #bat2.plugged {
+    color: #2980b9;
     /* background-color: #26A65B; */
 }
 
@@ -128,9 +132,10 @@ window#waybar.chromium {
     }
 }
 
-#battery.critical:not(.charging) {
+#battery.critical:not(.charging),
+#bat2.critical:not(.charging) {
     background-color: #f53c3c;
-    color: #ffffff;
+    color: #f53c3c;
     animation-name: blink;
     animation-duration: 0.5s;
     animation-timing-function: linear;
@@ -149,7 +154,7 @@ label:focus {
 
 #memory {
     /* background-color: #9b59b6; */
-    /* color: #9b59b6; */
+    color: #b48ead;
 }
 
 #disk {
@@ -162,7 +167,7 @@ label:focus {
 
 #network {
     /* background-color: #2980b9; */
-    /* color: #2980b9; */
+    color: #ebcb8b;
 }
 
 #network.disconnected {
@@ -264,3 +269,83 @@ label:focus {
 #keyboard-state > label.locked {
     background: rgba(0, 0, 0, 0.2);
 }
+
+
+
+/* window#waybar {
+     background: #2d2a2e;
+ }
+ 
+ * {
+     color: #c8b9a9;
+     font-family: Ubuntu Mono, sans-serif;
+     font-size: 12px;
+ }
+ 
+ #workspaces button.focused {
+     color: #f2e5bc;
+ }
+ 
+ #workspaces button {
+     color: #c8b9a9;
+ }
+ 
+ .separator {
+     background-color: #c8b9a9;
+ }
+ 
+ #mode {
+     color: #ebcb8b;
+ }
+ 
+ #clock {
+     color: #a3be8c;
+ }
+ 
+ #battery {
+     color: #d8dee9;
+ }
+ 
+ #battery.charging {
+     color: #b48ead;
+ }
+ 
+ #battery.critical:not(.charging) {
+     color: #bf616a;
+ }
+ 
+ #cpu {
+     color: #a3be8c;
+ }
+ 
+ #memory {
+     color: #d3869b;
+ }
+ 
+ #network {
+     color: #8fbcbb;
+ }
+ 
+ #network.disabled {
+     color: #bf616a;
+ }
+ 
+ #network.disconnected {
+     color: #bf616a;
+ }
+ 
+ #pulseaudio {
+     color: #b48ead;
+ }
+ 
+ #pulseaudio.muted {
+     color: #bf616a;
+ }
+ 
+ #temperature {
+     color: #8fbcbb;
+ }
+ 
+ #temperature.critical {
+     color: #bf616a;
+ } */
