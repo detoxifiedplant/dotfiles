@@ -1,9 +1,9 @@
 # dynamic_title = true
-import = ["/home/kamal/.config/alacritty/themes/themes/catppuccin_latte.toml"]
+import = ["/home/kamal/.config/alacritty/themes/themes/catppuccin_mocha.toml"]
 # raw_bold_text_with_bright_colors = true
 
 [window]
-dynamic_padding = true
+# dynamic_padding = true
 # opacity = 0.92
 # startup_mode = "Fullscreen"
 
@@ -15,12 +15,10 @@ cursor = "CellForeground"
 text = "CellBackground"
 
 [colors.primary]
-# background = "#0f0f0f"
-background = "#eff1f5"
+background = "#0f0f0f"
 bright_foreground = "#eaeaea"
 dim_foreground = "#828482"
-# foreground = "#c5c8c6"
-foreground = "#0f0f0f"
+foreground = "#c5c8c6"
 
 [colors.search.focused_match]
 background = "#000000"
@@ -41,7 +39,7 @@ text = "#000000"
 
 [font]
 builtin_box_drawing = true
-size = 11
+size = 14
 
 [font.bold]
 family = "terminal-font"
@@ -81,7 +79,7 @@ lines = 27
 
 [window.padding]
 # x = 5
-y = 0
+# y = 0
 
 # [footer_bar]
 # background= '#c5c8c6'

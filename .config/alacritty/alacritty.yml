@@ -4,7 +4,7 @@
       - --login
 
   window:
-    # opacity: 0.92
+    # opacity: 0.95
     # background-opacity: 0.4
     # startup_mode: Fullscreen
     dynamic_padding: true
@@ -90,9 +90,10 @@
   colors:
     # Default colors
     primary:
-      # background: '#000000'
+      background: '#ff00ff'
       # background: '#131414'
-      background: '#0f0f0f'
+      # background: '#0f0f0f'
+      # background: '#121010'
       # background: '#1a171f'
       # background: '#1d1f21'
 
