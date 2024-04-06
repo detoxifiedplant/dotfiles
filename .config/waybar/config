@@ -23,6 +23,10 @@
         "icon-size": 18,
         "spacing": 10
     },
+    "sway/window": {
+        "max-length": 40,
+        "format": "{title}",
+    },
     // "clock": {
     //     // "timezone": "America/New_York",
     //     "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>",
@@ -113,12 +117,13 @@
     "network": {
         // "interface": "wlp2*", // (Optional) To force the use of this interface
         // "format-wifi": "{essid} ({signalStrength}%) ",
-        "format-wifi": "{essid}   {signalStrength}",
+        "format-wifi": "  {signalStrength} {essid} ",
         "format-ethernet": "{ipaddr}/{cidr} ",
         "tooltip-format": "{ifname} via {gwaddr} ",
         "format-linked": "{ifname} (No IP) ",
         "format-disconnected": "No Network 󱚼 ",
-        "format-alt": "{ifname}: {ipaddr}/{cidr}"
+        "format-alt": "{ifname}: {ipaddr}/{cidr}",
+        "max-length": 15,
     },
     "pulseaudio": {
         // "scroll-step": 1, // %, can be a float
