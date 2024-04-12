@@ -27,7 +27,7 @@ if [ -d "$HOME/.local/bin" ]; then
 fi
 . "$HOME/.cargo/env"
 
-if [ "XDG_SESSION_TYPE" != "wayland" ]; then
+if [ "$XDG_SESSION_TYPE" != "wayland" ]; then
 	setxkbmap -option caps:swapescape
 	setxkbmap -option ctrl:swap_lalt_lctl
 fi
