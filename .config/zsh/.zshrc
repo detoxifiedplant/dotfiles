@@ -169,8 +169,6 @@ alias q="exit"
 alias snow="shutdown now"
 alias rn="ranger"
 alias -- -="cd -"
-alias cpf="~/tcpl/copyfiles.sh"
-alias ref="~/tcpl/revert.sh"
 # alias hs="history | grep"
 alias mkcd='foo(){ mkdir -p "$1"; cd "$1" }; foo '
 alias sql='mysql'
@@ -183,16 +181,20 @@ alias grep='rg'
 alias ..='cd ..'
 alias ...='cd ../..'
 alias ....='cd ../../..'
-alias nd='npm run dev'
-alias na='npm run all'
 alias p='python3'
-alias ps='python3 -m uvicorn app.main:app --reload --header server:TechFinoMSME | spacer'
 alias fman='compgen -c | fzf | xargs man'
 alias tl='tldr'
 alias cr='cargo run'
-alias bnd='~/tcpl/backend.sh'
-alias fnd='~/tcpl/frontend.sh'
+
+# tcpl alias
+alias nd='npm run dev'
+alias na='npm run all'
+alias psrun='python3 -m uvicorn app.main:app --reload --header server:TechFinoMSME | spacer'
+alias bnd='start_backend'
+alias fnd='start_frontend'
+alias cpf="copytcplfiles"
+alias ref="reverttcplfiles"
 alias ngg='./node_modules/.bin/ng s'
 
-# alias -- -v='--version'
-#
+
+
