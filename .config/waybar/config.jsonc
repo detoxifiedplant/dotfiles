@@ -1,4 +1,6 @@
 {
+	"bar_id": "bar-0",
+    "ipc": true,
     // "layer": "top", // Waybar at top layer
     // "position": "bottom", // Waybar position (top|bottom|left|right)
     "height": 20, // Waybar height (to be removed for auto height)
@@ -26,7 +28,7 @@
     "sway/scratchpad": {
         "format": "{icon} {count}",
         "show-empty": false,
-        "format-icons": ["", ""],
+        "format-icons": ["", " "],
         "tooltip": true,
         "tooltip-format": "{app}: {title}"
     },

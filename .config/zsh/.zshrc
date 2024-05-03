@@ -18,7 +18,7 @@ plug "Aloxaf/fzf-tab"
 
 export TERM=alacritty
 export KEYTIMEOUT=5
-# export MANPAGER="$(which nvim) +Man!"
+export MANPAGER="$(which nvim) +Man!"
 # sourcing p10k.config
 # [[ ! -f ~/.config/zsh//.p10k.zsh ]] || source ~/.config/zsh//.p10k.zsh
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
@@ -88,7 +88,7 @@ export SUDO_EDITOR=$EDITOR
 export VISUAL=$EDITOR
 
 # MANPAGER
-export MANPAGER="sh -c 'col -bx | batcat -l man -p'"
+# export MANPAGER="sh -c 'col -bx | batcat -l man -p'"
 
 # export FZF_DEFAULT_COMMAND='fd .'
 # bindkey -s '^S' ' **^I'
@@ -153,6 +153,11 @@ export DB_PASS="juspkml"
 export DB_NAME="hyperswitch_db"
 export XDG_CURRENT_DESKTOP=Unity
 
+eval "$(zoxide init zsh)"
+export _ZO_ECHO=1
+
+
+
 alias zcon="vim ~/.config/zsh/.zshrc"
 alias nano="vim"
 alias vi="vim -u NONE"
@@ -168,7 +173,7 @@ alias t="tree"
 alias q="exit"
 alias snow="shutdown now"
 alias rn="ranger"
-alias -- -="cd -"
+alias -- -="z -"
 # alias hs="history | grep"
 alias mkcd='foo(){ mkdir -p "$1"; cd "$1" }; foo '
 alias sql='mysql'
@@ -178,9 +183,10 @@ alias lg='lazygit'
 alias whe='pwd'
 alias bare='/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree ~'
 alias grep='rg'
-alias ..='cd ..'
-alias ...='cd ../..'
-alias ....='cd ../../..'
+alias ..='z ..'
+alias ...='z ../..'
+alias ....='z ../../..'
+alias cd='z'
 alias p='python3'
 alias fman='compgen -c | fzf | xargs man'
 alias tl='tldr'
